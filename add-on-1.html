@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sourdough</title>
+  </head>
+  <style>
+    body {
+      background: #cadefc;
+    }
+
+    img {
+      max-width: 100%;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      line-height: 150%;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #cadefc;
+      background: white;
+      font-size: 18px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+    button:hover {
+      background-color: #cadefc;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 600px;
+      background: white;
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .theme-button {
+      font-size: 10px;
+      background: black;
+      color: white;
+      padding: 5px 8px;
+      border-radius: 4px;
+    }
+    .theme-button:hover {
+      background: white;
+      color: black;
+    }
+    .sourdough-starter-image {
+      border-radius: 10px;
+      transition: all 150ms ease-in-out;
+    }
+    .sourdough-starter-image:hover {
+      filter: contrast(70%);
+      transform: scale(1.2);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .grid img:hover {
+      transform: scale(1.2);
+    }
+    .dark {
+      background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+      color: white;
+    }
+    .dark .container {
+      background: radial-gradient(
+        666px at 0.4% 48%,
+        rgb(202, 204, 227) 0%,
+        rgb(89, 89, 99) 97.5%
+      );
+    }
+    .dark a {
+      color: burlywood;
+    }
+  </style>
+  <body>
+    <button class="theme-button">Dark theme</button>
+    <div class="container">
+      <h1>Sourdough Breads</h1>
+      <h2>My delicious hobby</h2>
+      <a
+        href="https://www.bbcgoodfood.com/howto/guide/what-sourdough"
+        target="_blank"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/046/original/anshu-a-E5xgkSFan84-unsplash.jpg?1696457487"
+          alt="pic1"
+          class="sourdough-starter-image"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/051/original/anton-gMZNtPDqobg-unsplash.jpg?1696457895"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/035/original/tommaso-urli-vEtYK2wkOt0-unsplash.jpg?1696450176"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/139/original/dovile-ramoskaite-9CnK7PWnlns-unsplash.jpg?1696535937"
+          alt=""
+        />
+        <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/138/original/meina-yin-wIm4CDia_1s-unsplash.jpg?"
+        " alt="" />
+      </div>
+      <p>
+        Sourdough is naturally leavened bread, which means it doesn’t use
+        commercial yeast to rise. Instead, it uses a ‘starter’ – a fermented
+        flour and water mixture that contains wild yeast and good bacteria – to
+        rise. This also produces the tangy flavour and slightly chewy texture
+        you’ll find in sourdough. Wild yeast has more flavour than commercial
+        yeast, and is natural in the sense that it doesn’t contain any
+        additives.
+      </p>
+      <a href="https://www.bbcgoodfood.com/howto/guide/what-sourdough">
+        <strong>Read more on BBC</strong></a
+      >
+      <button>Bake your bread</button>
+    </div>
+    <footer>Coded by Monika Gosa</footer>
+
+    <script>
+      function darkTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", darkTheme);
+    </script>
+  </body>
+</html>
